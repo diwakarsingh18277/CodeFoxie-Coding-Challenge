@@ -11,8 +11,7 @@ Assumptions made:
 
 using namespace std;
 
-int main()
-{
+int main() {
     int numberOfBeers = 6;  //number of varieties of beers(Given in problem statement as 6)
 
     //maximum and minimum temperature for 5 types of beers is given in problem statement, and assuming for 6th type as 1-4(degree celcius)
@@ -40,8 +39,7 @@ int main()
     cout<<"\nTruck on it's way.\n\n";
     int currentTime=1; //Time spent in journey till now
     int checkingInterval=1;//Interval at which temperatures are checked periodically
-    while(currentTime < numOfSeconds)
-    {
+    while(currentTime < numOfSeconds) {
         cout<<"\n-->> At second "<<currentTime<<":\n";
         //At each second, reading of the each temperature sensors is taken as input
         cout<<"Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): ";
@@ -52,15 +50,12 @@ int main()
             cin>>currentTemperatureAll[i];
 
         vector<int> temperatureLess, temperatureMore;
-        for(int i=0;i<numberOfBeers;i++)
-        {
-            if(currentTemperatureAll[i]<extremeLimits[i].first)
-            {
+        for(int i=0;i<numberOfBeers;i++) {
+            if(currentTemperatureAll[i]<extremeLimits[i].first) {
                 temperatureLess.push_back(i + 1);
                 allContainersGood=false; //if lower temperature than the required temperature found.
             }
-            else if(currentTemperatureAll[i]>extremeLimits[i].second)
-            {
+            else if(currentTemperatureAll[i]>extremeLimits[i].second) {
                 temperatureMore.push_back(i + 1);
                 allContainersGood=false; //if higher temperature than the required temperature found.
             }
@@ -68,12 +63,10 @@ int main()
 
         if(allContainersGood==true)
             cout<<"\tAll Beers are safe till now.\n";
-        else
-        {
+        else {
             if(temperatureLess.size() == 0)
                 cout<<"\tNo container has lower temperature than the minimum temperature of respective containers.\n";
-            else
-            {
+            else {
                 cout<<"\tFollowing containers have lower temperature than their minimum acceptable values:\n";
                 for(int i=0;i<temperatureLess.size();i++)
                     cout<<"\t\t"<<i+1<<". Container number "<<temperatureLess[i]<<"\n";
@@ -82,8 +75,7 @@ int main()
 
             if(temperatureMore.size() == 0)
                 cout<<"\tNo container has higher temperature than the maximum temperature required by respective containers.\n";
-            else
-            {
+            else {
                 cout<<"\tFollowing containers have higher temperature than their maximum acceptable values:\n";
                 for(int i=0;i<temperatureMore.size();i++)
                     cout<<"\t\t"<<i+1<<". Container number "<<temperatureMore[i]<<"\n";
@@ -93,6 +85,6 @@ int main()
         currentTime += checkingInterval;
     }
 
-    cout<<"\nTruck reached Destination: \n\n";
+    cout << "\nTruck reached Destination: \n\n";
     return 0;
 }
