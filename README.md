@@ -72,10 +72,12 @@ Truck on it's way.
 
 
 -->> At second 1:
+
 Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): 4 5 7 8 5 4
         All Beers are safe till now.
 
 -->> At second 2:
+
 Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): 5 4 7 4 5 4
         Following containers have lower temperature than their minimum acceptable values:
                 1. Container number 2
@@ -84,6 +86,7 @@ Enter the present reading of each temperature sensor of the containers(in form o
         No container has higher temperature than the maximum temperature required by respective containers.
 
 -->> At second 3:
+
 Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): 9 7 4 2 4 6
         Following containers have lower temperature than their minimum acceptable values:
                 1. Container number 4
@@ -94,10 +97,12 @@ Enter the present reading of each temperature sensor of the containers(in form o
                 3. Container number 6
 
 -->> At second 4:
+
 Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): 4 5 7 8 5 2
         All Beers are safe till now.
 
 -->> At second 5:
+
 Enter the present reading of each temperature sensor of the containers(in form of array, separated by space): 4 8 6 6 3 5
         No container has lower temperature than the minimum temperature of respective containers.
 
